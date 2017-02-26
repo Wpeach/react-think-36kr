@@ -28,28 +28,25 @@ export default class PCHeader extends React.Component {
                     <Col span={16}>
                         <Menu mode="horizontal" selectedKeys={[this.state.current]}>
                             <Menu.Item key="top">
-                                <Icon type="appstore"/>首页
+                                <Icon type="appstore"/>最新文章
                             </Menu.Item>
                             <Menu.Item key="shehui">
-                                <Icon type="appstore"/>社会
+                                <Icon type="appstore"/>明星公司
                             </Menu.Item>
                             <Menu.Item key="guonei">
-                                <Icon type="appstore"/>国内
+                                <Icon type="appstore"/>行业新闻
                             </Menu.Item>
                             <Menu.Item key="guoji">
-                                <Icon type="appstore"/>国际
+                                <Icon type="appstore"/>早期项目
                             </Menu.Item>
                             <Menu.Item key="yule">
-                                <Icon type="appstore"/>娱乐
+                                <Icon type="appstore"/>深度报告
                             </Menu.Item>
                             <Menu.Item key="tiyu">
-                                <Icon type="appstore"/>体育
+                                <Icon type="appstore"/>技能GET
                             </Menu.Item>
                             <Menu.Item key="keji">
-                                <Icon type="appstore"/>科技
-                            </Menu.Item>
-                            <Menu.Item key="shishang">
-                                <Icon type="appstore"/>时尚
+                                <Icon type="appstore"/>行业研究
                             </Menu.Item>
                         </Menu>
                     </Col>
