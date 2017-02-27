@@ -19,7 +19,7 @@ export default class PCNewsBlock extends React.Component {
         //     .then(response => response.json()).then(json => this.setState({ news: json }))
 
         fetch(Config.host+"/api/post/", myFetchOptions)
-        .then(response => response.json()).then(json => this.setState({ news: json.data.data }))；
+        .then(response => response.json()).then(json => this.setState({ news: json.data.data }));
 
 
 
