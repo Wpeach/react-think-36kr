@@ -42,12 +42,12 @@ html{
     font-size:14px;
     padding:.2rem 0;
     border-bottom:1px solid #e5e5e5;
-    margin:0 .3rem
+    margin:0 .5rem 0 0
 }
 .m_article .m_article_img{
     float:left;
     width:27%;
-    height:1.4rem;
+    height:2rem;
     overflow:hidden;
     position:relative;
     margin-right:.2rem

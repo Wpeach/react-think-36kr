@@ -42,7 +42,6 @@ export default class PCNewsBlock extends React.Component {
                             </div>
                             <div className="m_article_desc clearfix">
                                 <div className="m_article_desc_l">
-                                    <span className="m_article_channel">{newsItem.status}</span>
                                     <span className="m_article_tiem">{newsItem.update_time}</span>
                                 </div>
                             </div>

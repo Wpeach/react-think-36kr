@@ -51,7 +51,7 @@ export default class PCNewsImageBlock extends React.Component{
         "没有获取到任何数据"
         return(
             <div class="container">
-                <div bordered={true} style={{width:this.props.width}}>
+                <div  style={{width:this.props.width}}>
                     {newsList}
                 </div>
             </div>
