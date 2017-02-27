@@ -20,25 +20,40 @@ export default class PCNewsImageBlock extends React.Component{
     };
 
     render(){
+        const styleImage={
+            display:"block",
+            width:this.props.imageWidth,
+            height:"135px"
+        }
+        const styleH3={
+            width:this.props.imageWidth,
+            whiteSpace:"nowrap",
+            overflow:"hidden",
+            textOverflow:"ellipsis"
+        };
+
         const{news}=this.state;
         const newsList=news.length
         ?
         news.map((newsItem,index)=>(
-            <li key={index}>
-                <Link to={`detailks/${newsItem.uniquekey}`} target="_blank">
-                    {newsItem.title}
+            <div key={index} class="imageblock">
+                <Link to={`details/${newsItem.uniquekey}`} target="_blank">
+                   <div class="custom-img">
+                        <img alt="" style={styleImage} src={newsItem.thumbnail_pic_s} />
+                   </div>
+                   <div class="custom-card">
+                        <h3 style={styleH3}>{newsItem.title}</h3>
+                   </div>
                 </Link>
-            </li>
+            </div>
         ))
         :
         "没有获取到任何数据"
         return(
-            <div class="topNewsList">
-                <Card>
-                    <ul>
-                        {newsList}
-                    </ul>
-                </Card>
+            <div class="container">
+                <div bordered={true} style={{width:this.props.width}}>
+                    {newsList}
+                </div>
             </div>
         );
     }
