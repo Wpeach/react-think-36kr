@@ -25,9 +25,6 @@ export default class PCNewsDetails extends React.Component {
         //         this.setState({ newsItem: json });
         //         document.title = this.state.newsItem.title + "- React 36Kr新闻平台";
         //     })
-        //<Link to={`details/${this.props.params.uniquekey}`}  target="_blank">
-        //<Button class="add_btn" htmlType="button">编辑</Button>
-        //</Link>
         fetch(Config.host + "/api/post/" + this.props.params.uniquekey, myFetchOptions)
             .then(response => response.json())
             .then(json => {
@@ -54,7 +51,9 @@ export default class PCNewsDetails extends React.Component {
                         <p>{newsItem.update_time}</p>
                         <div dangerouslySetInnerHTML={this.createMarkup()}></div>
                         <Link to={`editor/${this.props.params.uniquekey}`} target="_blank">
-                            <Button type="primary" class="editor_btn" htmlType="button">编辑</Button>
+                            <div class="editor_btn">
+                                <Button type="primary"  htmlType="button">编辑</Button>
+                            </div>
                         </Link>
                     </Col>
                     <Col span={2}></Col>

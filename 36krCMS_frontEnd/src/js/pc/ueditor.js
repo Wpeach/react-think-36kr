@@ -47,7 +47,7 @@ var Ueditor = React.createClass({
     },
     render : function(){
         return (
-             <script id={this.props.id} name="content" type="text/plain">
+             <script id={this.props.id} value={this.props.value}  name="content" type="text/plain">
                   
              </script>
         )
