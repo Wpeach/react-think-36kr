@@ -97,6 +97,16 @@
     border-bottom: 1px solid #e5e5e5
 }
 
-.editor_btn{
+.operator_btn{
+    margin-top: 10px;
     text-align: center;
+}
+
+.menu .menu-item{
+    margin-left: 30px;
+    
+}
+
+.menu-float{
+    float: left;
 }

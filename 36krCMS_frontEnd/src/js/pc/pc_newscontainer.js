@@ -20,7 +20,9 @@ export default class PCNewsContainer extends React.Component {
             slidesToShow: 1,
             autoplay: true
         }
-
+        componentWillMount(){
+            document.getElementById("img_1").style()
+        }
         return (
             <div>
                 <Row>
@@ -28,9 +30,9 @@ export default class PCNewsContainer extends React.Component {
                     <Col span={13} class="container">
                         <div class="picturecarousel">
                                 <Carousel {...settings}>
-                                    <div><img src="./src/images/carousel_1.jpg" style={topImage}/></div>
-                                    <div><img src="./src/images/carousel_2.jpg" style={topImage}/></div>
-                                    <div><img src="./src/images/carousel_3.jpg" style={topImage}/></div>
+                                    <div><img id="img_1" src="./src/images/carousel_1.jpg" style={topImage}/></div>
+                                    <div><img id="img_2" src="./src/images/carousel_2.jpg" style={topImage}/></div>
+                                    <div><img id="img_3" src="./src/images/carousel_3.jpg" style={topImage}/></div>
                                     <div><img src="./src/images/carousel_4.jpg" style={topImage}/></div>
                                 </Carousel>
                         </div>

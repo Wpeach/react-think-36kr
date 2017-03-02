@@ -19,12 +19,12 @@ export default class extends Base {
         return this.lastest();
       }
       data = await this.modelInstance.where({id: this.id}).find();
-      //文章选项
-      if(data.options){
-        data.options = JSON.parse(data.options) || {};
-      }else{
-        data.options = {};
-      }
+      // //文章选项
+      // if(data.options){
+      //   data.options = JSON.parse(data.options) || {};
+      // }else{
+      //   data.options = {};
+      // }
     } else {
       let where = {};
     //   //不是管理员，只显示个人的文章

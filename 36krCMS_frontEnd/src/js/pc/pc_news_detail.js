@@ -39,7 +39,6 @@ export default class PCNewsDetails extends React.Component {
     render() {
         const {newsItem} = this.state;
         console.log(newsItem);
-        //const newId = this.props.params.uniquekey;
         return (
             <div>
                 <PCHeader></PCHeader>
@@ -51,7 +50,7 @@ export default class PCNewsDetails extends React.Component {
                         <p>{newsItem.update_time}</p>
                         <div dangerouslySetInnerHTML={this.createMarkup()}></div>
                         <Link to={`editor/${this.props.params.uniquekey}`} target="_blank">
-                            <div class="editor_btn">
+                            <div class="operator_btn">
                                 <Button type="primary"  htmlType="button">编辑</Button>
                             </div>
                         </Link>

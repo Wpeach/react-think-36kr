@@ -21,8 +21,7 @@ export default class PCNewsBlock extends React.Component {
         fetch(Config.host+"/api/post/", myFetchOptions)
         .then(response => response.json()).then(json => this.setState({ news: json.data.data }));
 
-
-
+       
     };
 
     render() {
@@ -52,11 +51,11 @@ export default class PCNewsBlock extends React.Component {
             :
             "没有获取到任何数据"
         return (
-            <div class="topNewsList">
-                <Col span={24}>
-                        {newsList}
-                </Col>
-            </div>
+           <div class="menu">
+               <div class="menu-item menu-float">百度</div>
+               <div class="menu-item">阿里</div>
+               <div class="menu-item">腾讯</div>
+           </div>
         );
     }
 }

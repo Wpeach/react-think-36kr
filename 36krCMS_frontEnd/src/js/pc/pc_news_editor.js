@@ -21,7 +21,7 @@ class PCNewsEditor extends React.Component {
         fetch(Config.host + "/api/post/" + this.props.params.uniquekey, { method: 'GET' })
             .then(response => response.json())
             .then(json =>{
-                this.setState({ id: json.data.id, title: json.data.title, cover_img: json.data.cover_img})
+                this.setState({ id: json.data.id, title: json.data.title, cover_img: json.data.cover_img })
                 UE.getEditor("content").setContent(json.data.content);
             } );
 
@@ -36,6 +36,19 @@ class PCNewsEditor extends React.Component {
             editor.addListener("ready", this.editorReady());
             console.log(this.state.title);
             console.log(this.state.content);
+
+            //function(self){
+            // {
+            // newContent=json.data.content;
+            //  this.setState({title:json.data.titel,cover_img:json.data.cover_img,contents:json.data.content});
+            //   document.getElementById("title").value=json.data.title;
+            //   document.getElementById("cover_img").value=json.data.cover_img;
+            // editor.setContent(newContent);
+            //   })
+
+            // });
+
+
         }
     }
     editorSubmit(e) {
@@ -120,7 +133,10 @@ class PCNewsEditor extends React.Component {
                             <div class="ueditor">
                                 <Ueditor value={this.state.content} id="content" height="400" onChange={this.handlechange.bind(this, 'content')} />
                             </div>
-                            <Button type="primary" htmlType="submit">提交</Button>
+                            <div class="operator_btn">
+                                <Button type="primary" htmlType="submit">提交</Button>
+                            </div>
+                            
                         </Form>
                     </Col>
                     <Col span={2}></Col>
